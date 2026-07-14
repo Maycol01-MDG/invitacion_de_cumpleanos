@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Cumpleaños de Laly Samara</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       AUDIO Y BOTONES FLOTANTES
+  ====================================================== -->
+  <!-- Ruta corregida según tu carpeta -->
+  <audio id="bg-music" loop>
+    <source src="musica/cancion.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="btn-music" class="floating-btn music-btn">
+    <i class="fa-solid fa-volume-xmark" id="music-icon"></i>
+  </button>
+
+  <a href="https://wa.me/51963316629" target="_blank" class="floating-btn wa-btn">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ======================================================
+       CANVAS DE CONFETI
+  ====================================================== -->
+  <canvas id="confetti-canvas"></canvas>
+
+ <!-- ======================================================
+       SECCIÓN 1: HERO / PORTADA (Estilo Floral/Mariposas)
+  ====================================================== -->
+  <section id="hero" class="hero-floral">
+    <div class="particles" id="particles"></div>
+
+    <div class="hero-content fade-in">
+      <div class="hero-badge">- ESTÁS INVITADO AL CUMPLEAÑOS DE -</div>
+
+      <!-- FOTO CIRCULAR CON CORONA FLORAL Y MARIPOSAS -->
+      <div class="hero-photo-wrapper">
+        <div class="hero-photo-container">
+          <img src="fotos/portada.jpg" alt="Laly Samara" class="hero-photo">
+          
+          <!-- Adornos simulando la referencia -->
+          <div class="decor-item decor-butterfly-1">🦋</div>
+          <div class="decor-item decor-flower-1">🌸</div>
+          <div class="decor-item decor-flower-2">🌼</div>
+          <div class="decor-item decor-leaf-1">🌿</div>
+          <div class="decor-item decor-butterfly-2">🦋</div>
+          <div class="decor-item decor-flower-3">🌸</div>
+        </div>
+      </div>
+
+      <!-- TÍTULO ESTILO REFERENCIA -->
+      <h1 class="hero-title name-title">
+        Laly Samara<br>
+        <span class="last-names">Mahelet Coronado Mondragón</span>
+      </h1>
+      <p class="hero-subtitle turning-text">¡Ven a celebrar con nosotros!</p>
+      
+      <a href="#cuenta-regresiva" class="btn-primary" id="btn-ver">
+        🎁 Ver invitación
+      </a>
+    </div>
+
+    <!-- Hojas y flores decorativas de fondo -->
+    <div class="balloon balloon-1">🦋</div>
+    <div class="balloon balloon-2">🌸</div>
+    <div class="balloon balloon-3">🌼</div>
+    <div class="balloon balloon-4">🌿</div>
+  </section>
+  <!-- ======================================================
+       SECCIÓN 2: CUENTA REGRESIVA
+  ====================================================== -->
+  <section id="cuenta-regresiva" class="section fade-in-section">
+    <div class="section-header">
+      <span class="section-eyebrow">El gran día se acerca</span>
+      <h2>Cuenta Regresiva</h2>
+    </div>
+
+    <div id="birthday-msg" class="birthday-msg hidden">
+      🎂 ¡Hoy es el gran día! ¡Feliz cumpleaños Laly! 🎉
+    </div>
+
+    <div id="countdown" class="countdown-grid">
+      <div class="countdown-card">
+        <span class="countdown-number" id="days">00</span>
+        <span class="countdown-label">Días</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-card">
+        <span class="countdown-number" id="hours">00</span>
+        <span class="countdown-label">Horas</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-card">
+        <span class="countdown-number" id="minutes">00</span>
+        <span class="countdown-label">Minutos</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-card">
+        <span class="countdown-number" id="seconds">00</span>
+        <span class="countdown-label">Segundos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SECCIÓN 3: INFORMACIÓN DEL EVENTO
+  ====================================================== -->
+  <section id="evento" class="section fade-in-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Todo lo que necesitas saber</span>
+      <h2>Detalles del Evento</h2>
+    </div>
+
+    <div class="event-card">
+      <div class="event-item">
+        <div class="event-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <div class="event-info">
+          <span class="event-label">Fecha</span>
+          <span class="event-value">Domingo, 19 de Julio del 2026</span>
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cumplea%C3%B1os+de+Laly&dates=20260719T210000Z/20260720T010000Z&details=Celebremos+juntos!&location=Madreselvas+181" target="_blank" class="link-action"><i class="fa-solid fa-calendar-plus"></i> Agregar al Calendario</a>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="event-info">
+          <span class="event-label">Hora</span>
+          <span class="event-value">4:00 PM</span>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="event-info">
+          <span class="event-label">Lugar</span>
+          <span class="event-value">Madreselvas 181</span>
+          <a href="https://maps.google.com/?q=-12.081528,-76.982667" target="_blank" class="link-action"><i class="fa-solid fa-map-location-dot"></i> Ver ubicación / Cómo llegar</a>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-icon"><i class="fa-solid fa-shirt"></i></div>
+        <div class="event-info">
+          <span class="event-label">Código de vestimenta</span>
+          <span class="event-value">✨ Casual Elegante / 🌸 Colores claros</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SECCIÓN 4: MENSAJE ESPECIAL
+  ====================================================== -->
+  <section id="mensaje" class="section fade-in-section section-dark">
+    <div class="section-header light">
+      <span class="section-eyebrow light">Desde el corazón</span>
+      <h2>Un día para recordar</h2>
+    </div>
+
+    <div class="message-card">
+      <div class="message-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+      <p class="message-text">
+        Hay momentos que permanecen para siempre en el corazón.<br><br>
+        Tu presencia hará que este día sea aún más especial.<br><br>
+        Ven a celebrar conmigo un cumpleaños lleno de alegría, sonrisas, juegos y muchas sorpresas.<br><br>
+        <strong>¡Te esperamos!</strong>
+      </p>
+      <div class="message-hearts">🌸 ✨ 🌸</div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SECCIÓN 5: GALERÍA DE RECUERDOS (CARRUSEL)
+  ====================================================== -->
+  <section id="galeria" class="section fade-in-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Momentos que atesoramos</span>
+      <h2>Nuestros mejores recuerdos</h2>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="auto-carousel">
+        <div class="gallery-card">
+          <img src="fotos/laly1.jpg" alt="Recuerdo 1" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-card">
+          <img src="fotos/laly2.jpg" alt="Recuerdo 2" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-card">
+          <img src="fotos/laly3.jpg" alt="Recuerdo 3" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-card">
+          <img src="fotos/recuerdo1.jpg" alt="Recuerdo 4" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-card">
+          <img src="fotos/recuerdo2.jpg" alt="Recuerdo 5" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox hidden">
+    <button class="lightbox-close" id="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+    <img id="lightbox-img" src="" alt="Ampliación" />
+  </div>
+
+  <!-- ======================================================
+       SECCIÓN 6: COMPARTIR FOTOGRAFÍAS (Google Drive)
+  ====================================================== -->
+  <section id="compartir" class="section fade-in-section section-dark">
+    <div class="section-header light">
+      <span class="section-eyebrow light">Crea el álbum juntos</span>
+      <h2>Comparte tus recuerdos 📸</h2>
+    </div>
+
+    <p class="share-description">
+      Queremos conservar cada sonrisa, abrazo y momento especial.<br>
+      Si tomaste fotografías durante la celebración, compártelas aquí para crear juntos un hermoso álbum de recuerdos.
+    </p>
+
+    <input type="file" id="file-input" accept="image/*" multiple hidden />
+
+    <button class="btn-primary btn-upload" id="btn-upload">
+      📸 Subir fotografías
+    </button>
+
+    <div id="upload-progress-wrapper" class="upload-progress-wrapper hidden">
+      <p id="upload-status" class="upload-status">Subiendo...</p>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <div class="gallery-grid upload-gallery" id="uploaded-gallery"></div>
+  </section>
+
+  <!-- ======================================================
+       SECCIÓN 7: RSVP / CONFIRMACIÓN DE ASISTENCIA
+  ====================================================== -->
+  <section id="rsvp" class="section fade-in-section">
+    <div class="section-header">
+      <span class="section-eyebrow">¡No faltes!</span>
+      <h2>Confirmación de Asistencia</h2>
+    </div>
+
+    <div class="rsvp-card">
+      <div id="rsvp-form-wrapper">
+        <div class="form-group">
+          <label for="rsvp-name"><i class="fa-solid fa-user"></i> Nombre</label>
+          <input type="text" id="rsvp-name" placeholder="Tu nombre completo" />
+        </div>
+
+        <div class="form-group">
+          <label for="rsvp-guests"><i class="fa-solid fa-users"></i> Número de personas</label>
+          <input type="number" id="rsvp-guests" min="1" max="10" placeholder="¿Cuántos asistirán?" />
+        </div>
+
+        <div class="form-group">
+          <label for="rsvp-message"><i class="fa-solid fa-comment-dots"></i> Mensaje</label>
+          <textarea id="rsvp-message" rows="3" placeholder="Déjanos un mensaje especial..."></textarea>
+        </div>
+
+        <button class="btn-primary" id="btn-rsvp">
+          <i class="fa-brands fa-whatsapp"></i> Confirmar asistencia por WhatsApp
+        </button>
+      </div>
+
+      <div id="rsvp-success" class="rsvp-success hidden">
+        <div class="success-icon">🎉</div>
+        <h3>¡Redirigiendo a WhatsApp!</h3>
+        <p>Enviaremos tu confirmación directamente a la familia.<br>¡Será una noche increíble!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SECCIÓN 8: PIE DE PÁGINA
+  ====================================================== -->
+  <footer id="footer">
+    <div class="footer-stars">⭐ ✨ 💫 ✨ ⭐</div>
+    <p class="footer-message">
+      Gracias por ser parte de este momento tan especial.<br>
+      <strong>¡Te esperamos con mucha ilusión!</strong>
+    </p>
+    <div class="footer-hearts">
+      <i class="fa-solid fa-heart"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-heart"></i>
+    </div>
+    <p class="footer-copy">Hecho con 💛 especialmente para Laly</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Script.js"></script>
+</body>
+</html>
