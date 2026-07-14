@@ -7,10 +7,11 @@ const CONFIG = {
   birthdayDate: "2026-07-19T16:00:00",
   // Número de WhatsApp (Código país + número sin espacios)
   whatsappPhone: "51963316629",
-  appsScriptUrl: "PEGA_AQUÍ_LA_URL_DE_TU_APPS_SCRIPT",
-  driveFolderId: "PEGA_AQUÍ_EL_ID_DE_TU_CARPETA",
+  // URL del Web App de Google Apps Script 
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxGWUIZr19FkLs4RXgPAEm0RX0l3aPyWsDWnmcd80umnW01LJp-IUr9eTUeAuY1vJOZ/exec",
+  // ID de la carpeta de Google Drive (Acceso libre configurado)
+  driveFolderId: "1NJ0jOKNpiZfaZcqhRqi05m3ruFdSSm86",
 };
-
 /* ─── AUDIO CONTROL ──────────────────────────────────────── */
 (function initAudio() {
   const music = document.getElementById("bg-music");
